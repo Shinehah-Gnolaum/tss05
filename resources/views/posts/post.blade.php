@@ -16,7 +16,7 @@
 
               Created at: <strong>{{ $post->created_at->toFormattedDateString() }}</strong>;
 
-              Updated at: <strong>{{ $post->updated_at->toFormattedDateString() }}</strong> <a href="#">Mark</a>
+              Updated at: <strong>{{ $post->updated_at->toFormattedDateString() }}</strong> <!-- <a href="#">Mark</a> -->
 
             </p>
 
