@@ -31,8 +31,10 @@ class ContactMailable extends Mailable
      */
     public function build()
     {
+        $mail_to_address = env('TSS_MAIL_TO_ADDRESS');
+
         return $this->view('emails.contact')
-        ->to('dbrower256@cableone.net')
+        ->to($mail_to_address)
         ->subject('message from texarkanasoftware.com website - ' . $this->request->subject);
     }
 }
