@@ -15,26 +15,10 @@
 </head>
 <body>
 
-    <script>
-        window.fbAsyncInit = function() {
-            FB.init({
-                appId            : '1972898709607502',
-                autoLogAppEvents : true,
-                xfbml            : true,
-                version          : 'v2.9'
-            });
-            FB.AppEvents.logPageView();
-        };
+    @include('google_analytics.analyticstracking')
 
-        (function(d, s, id){
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) {return;}
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/en_US/sdk.js";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
-
+    @include('facebook.script')
+    
     <div id="app" class="container">
 
         @include('layouts.nav')
